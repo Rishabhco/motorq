@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "dffde348-a960-4a40-8361-feb96f0755be",
+		"name": "motorq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15625058"
+	},
+	"item": [
+		{
+			"name": "Home page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/events/home",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attendes Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/attendes/home",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"attendes",
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Workshop B\",\r\n    \"capacity\":50,\r\n    \"availability\":50,\r\n    \"startDate\":\"2022-08-28 16:30:00\",\r\n    \"endDate\":\"2022-08-28 17:30:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/events/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/events/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attendes List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/attendes/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"attendes",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Attende",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Rishabh Agrawal\",\r\n    \"phone\":\"7984249849\",\r\n    \"email\":\"rishabh@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/attendes/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"attendes",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
