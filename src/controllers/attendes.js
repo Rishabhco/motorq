@@ -36,7 +36,6 @@ const add=async(req,res)=>{
                                 error
                             })
                         }else{
-                            //decrease the available seat by one till capacity is reached
                             if(result[0].availableSeat>0){
                                 Event.findOneAndUpdate({id:req.body.eventId},{$inc:{availableSeats:-1}},(err,result)=>{
                                     if(err){
