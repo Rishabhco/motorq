@@ -33,9 +33,9 @@ const add=async(req,res)=>{
     }
 }
 
-const list=(req,res)=>{
+const list=async(req,res)=>{
     try{
-        const result=Attende.find();
+        const result=await Attende.find();
         if(result){
             return res.status(200).send({
                 message:"Attende list",
