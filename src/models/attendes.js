@@ -6,6 +6,11 @@ const attendeSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
+    designation:{
+        type: String,
+        required: true,
+        trim: true,
+    },
     phone:{
         type:String,
         required:true,

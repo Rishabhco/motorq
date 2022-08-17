@@ -36,19 +36,26 @@ const add=async(req,res)=>{
                                 error
                             })
                         }else{
-                            Event.findOneAndUpdate({id:req.body.eventId},{$inc:{availableSeats:-1}},(err,result)=>{
-                                if(err){
-                                    return res.status(500).send({
-                                        message:"Error in the updating the event",
-                                        error
-                                    })
-                                }else{
-                                    return res.status(200).send({
-                                        message:"Attende added successfully",
-                                        result:res
-                                    })
-                                }
-                            })
+                            //decrease the available seat by one till capacity is reached
+                            if(result[0].availableSeat>0){
+                                Event.findOneAndUpdate({id:req.body.eventId},{$inc:{availableSeats:-1}},(err,result)=>{
+                                    if(err){
+                                        return res.status(500).send({
+                                            message:"Error in the updating the event",
+                                            error
+                                        })
+                                    }else{
+                                        return res.status(200).send({
+                                            message:"Attende added successfully",
+                                            result:res
+                                        })
+                                    }
+                                }).select("availableSeats")
+                            }else{
+                                return res.status(400).send({
+                                    message:"No seats available"
+                                })
+                            }
                         }
                     })
                 }else{
